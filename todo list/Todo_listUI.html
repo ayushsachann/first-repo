@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="button.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        header div.backimg{
+            height: 300px;
+            background-image: url(https://images.unsplash.com/photo-1563314706-0dea346c5bec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2353&q=80);
+            background-position: center;
+            background-size: cover;            
+        }
+        footer div.links{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1FA2FF;  
+            background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); 
+            background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); 
+
+            padding: 5px 10px;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+        }
+        footer div.links div.name{
+            font-size: smaller;
+            font-family: sans-serif;
+        }
+        footer div.links div.icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        footer div.links div.icons div.icon{
+            margin: auto 5px;
+        }
+        footer div.links div.icons div.icon:hover{
+            cursor: pointer;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+        }
+        div.container{
+            width: 300px;
+            height: 350px;
+            position: absolute;
+            bottom: 60px;
+            padding: 10px;
+        }
+        div.container div.upper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        div.upper div.todo h2{
+            font-family: sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+        div.container div.task{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            margin: 20px 0px;
+            padding: 5px 3px;
+            border-radius: 5px;
+
+        }
+        section div.container div.task input{
+            font-size: 15px;
+            flex-basis: 90%;
+            border: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="backimg"></div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="upper">
+                <div class="todo"><h2>ToDo List</h2></div>
+                <input type="checkbox" class="switch" id="switch-1" />
+            </div>
+            <div class="task">
+                    <input placeholder="Add task to list" type="text">
+                    <i class="fa-solid fa-circle-plus"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="links">
+            <div class="name">
+                <h2>Ayush Sachan</h2>
+            </div>
+            <div class="icons">
+                <div class="icon" style="color: purple;"><i class="fa-brands fa-instagram"></i></div>
+                <div class="icon"><i class="fa-brands fa-github"></i></div>
+                <div class="icon" style="color: navy;"><i class="fa-brands fa-linkedin"></i></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
