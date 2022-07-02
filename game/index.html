@@ -35,18 +35,29 @@
 
         div.choices img:hover{
             cursor: pointer;
-            transform: heatbeat;
+            transform: rotateZ(0deg);
         }
         
     </style>
 </head>
 <body>
+    <div class="board">
+        <h1>Player:</h1>
+        <h1 id="user"></h1>
+
+        <h1>Computer:</h1>
+        <h1 id="computer"></h1>
+        
+    </div>
     <div class="choices">
         <img src="https://www.svgrepo.com/show/323925/rock.svg" alt="rock" id="rock">
 
         <img src="https://www.svgrepo.com/show/323911/paper.svg" alt="paper" id="paper">
 
         <img src="https://www.svgrepo.com/show/323929/scissors.svg" alt="scissor" id="scissor">
+    </div>
+    <div class="result">
+        <h1></h1>
     </div>
 </body>
 </html>

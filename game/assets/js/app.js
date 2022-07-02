@@ -4,6 +4,10 @@ const choices_container = document.querySelector("div.choices")
 const rock_option = document.querySelector("img#rock")
 const paper_option = document.querySelector("img#paper")
 const scissor_option = document.querySelector("img#scissor")
+const result_container = document.querySelector(".result h1")
+
+let user_score = 0
+let computer_score = 0
 
 const random = () => {
     const val = Math.floor(Math.random().toFixed(1) * 3)
@@ -31,37 +35,53 @@ const game = (user_choice) => {
         case "rock":
             switch(computer_choice){
                 case "paper":
-                    return 'lose'
+                    computer_score++
+                    return 'Lost!! Paper beats Rock'
                 case "scissor":
-                    return 'win'
+                    user_score++
+                    return 'Win!! Rock beats Paper'
             }
         case "paper":
             switch(computer_choice){
                 case "rock":
-                    return 'win'
+                    user_score++
+                    return 'Win!! Paper beats Rock'
                 case "scissor":
-                    return 'lose'
+                    computer_score++
+                    return 'Lost!! Scissor cuts Paper'
             }
         case "scissor":
             switch(computer_choice){
                 case "paper":
-                    return 'win'
+                    user_score++
+                    return 'Win!! Scissor cuts Paper'
                 case "rock":
-                    return 'lose'
+                    computer_score++
+                    return 'Lost!! Rock beats Scissor'
             }
     }
 }
 
-rock_option.addEventListener('click', () => {
-    console.log(game('rock'))
+
+const refreshboard = ()=>{
+    const user = document.querySelector("#user")
+    const comp = document.querySelector("#computer")
     
+    user.innerHTML=user_score
+    comp.innerHTML=computer_score
+}
+rock_option.addEventListener('click', (e) => {
+    result_container.innerHTML = game('rock')
+    refreshboard()
 })
 
-paper_option.addEventListener('click', () => {
-    console.log(game('paper'))
+paper_option.addEventListener('click', (e) => {
+    result_container.innerHTML = game('paper')
+    refreshboard
 })
 
-scissor_option.addEventListener('click', () => {
-    console.log(game('scissor'))
+scissor_option.addEventListener('click', (e) => {
+    result_container.innerHTML = game('scissor')
+    refreshboard()
 })
 
