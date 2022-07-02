@@ -77,7 +77,7 @@ rock_option.addEventListener('click', (e) => {
 
 paper_option.addEventListener('click', (e) => {
     result_container.innerHTML = game('paper')
-    refreshboard
+    refreshboard()
 })
 
 scissor_option.addEventListener('click', (e) => {
